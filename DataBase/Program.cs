@@ -116,6 +116,13 @@ namespace DataBase
                             eList.RemoveAt(i);
                         }
                     }
+
+                    else
+                    {
+                        Console.WriteLine("Неверно введен номер сотрудника");
+                        Console.WriteLine("Нажмите любую клавишу для продолжения");
+                        Console.ReadLine();
+                    }  
                     
                 }
                 if (commands[0].ToLower() == "view" && commands.Length == 2)
