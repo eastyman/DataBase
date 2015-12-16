@@ -13,7 +13,7 @@ namespace DataBase
         public override void Write(string file)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<Employee>));
-            using (FileStream fs = new FileStream(file, FileMode.Open))
+            using (FileStream fs = new FileStream(file, FileMode.Create))
             {
                 formatter.Serialize(fs, Data);
             }

@@ -13,10 +13,17 @@ namespace DataBase
         public override void Read(string file)
         {
             XmlSerializer formatter = new XmlSerializer(typeof(List<Employee>));
-            using (FileStream fs = new FileStream(file, FileMode.Open))
+            FileInfo fileInfo = new FileInfo(file);
+            if (fileInfo.Exists)                
             {
-                Data = (List<Employee>)formatter.Deserialize(fs);
-            }
+                if (fileInfo.Length > 0)
+                {
+                    using (FileStream fs = new FileStream(file, FileMode.Open))
+                    {
+                        Data = (List<Employee>)formatter.Deserialize(fs);
+                    }
+                }
+            }            
         }
     }
 }
