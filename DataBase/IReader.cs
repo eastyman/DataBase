@@ -9,6 +9,7 @@ namespace DataBase
     public interface IReader
     {
         List<Employee> Data { get; } // Свойство для храннения считанных данных
+        string FileName { get; set; }
         void Read(string file); // Метод считывания данных        
     }
 }

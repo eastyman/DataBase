@@ -22,12 +22,14 @@ namespace DataBase
 
         public void Read()
         {
+            Reader.FileName = FileName;
             Reader.Read(FileName);
             Data = Reader.Data;
         }
 
         public void Write()
         {
+            Writer.FileName = FileName;
             Writer.Data = Data;
             Writer.Write(FileName);
         }
