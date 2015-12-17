@@ -17,13 +17,12 @@ namespace DataBase
         public List<Employee> Data { get; set; }
         public string FileName { get; set; }
         public IReader Reader { get; set; } // Свойство для инъекции зависимости, которая представляет реализацию считывания данных
-
         public IWriter Writer { get; set; } // Свойство для инъекции зависимости, которая представляет реализацию записи данных
 
         public void Read()
         {
             Reader.FileName = FileName;
-            Reader.Read(FileName);
+            Reader.Read();
             Data = Reader.Data;
         }
 
@@ -31,7 +30,7 @@ namespace DataBase
         {
             Writer.FileName = FileName;
             Writer.Data = Data;
-            Writer.Write(FileName);
+            Writer.Write();
         }
     }
 }

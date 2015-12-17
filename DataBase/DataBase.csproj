@@ -41,23 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BINReader.cs" />
-    <Compile Include="BINWriter.cs" />
-    <Compile Include="Driver.cs" />
-    <Compile Include="Empoyee.cs" />
-    <Compile Include="IReader.cs" />
-    <Compile Include="IWriter.cs" />
+    <Compile Include="Reader\BINReader.cs" />
+    <Compile Include="Writer\BINWriter.cs" />
+    <Compile Include="Logic\Driver.cs" />
+    <Compile Include="DataStructure\Empoyee.cs" />
+    <Compile Include="Interfaces\IReader.cs" />
+    <Compile Include="Interfaces\IWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reader.cs" />
-    <Compile Include="Writer.cs" />
-    <Compile Include="XMLReader.cs" />
-    <Compile Include="XMLWriter.cs" />
+    <Compile Include="Reader\Reader.cs" />
+    <Compile Include="Writer\Writer.cs" />
+    <Compile Include="Reader\XMLReader.cs" />
+    <Compile Include="Writer\XMLWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -51,6 +51,9 @@ namespace DataBase
                     Console.WriteLine("Нажмите любую клавишу для продолжения");
                     Console.ReadLine();
                     break;
+                default:
+                    Console.WriteLine("Недопустимая настройка в файле \"options.ini\", программа завершает работу");
+                    return;
             }
 
             List<Employee> eList = new List<Employee>();

@@ -21,6 +21,5 @@ namespace DataBase
             this.age = age;
             this.job = job;
         }
-
     }
 }

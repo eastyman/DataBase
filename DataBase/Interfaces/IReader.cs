@@ -10,6 +10,6 @@ namespace DataBase
     {
         List<Employee> Data { get; } // Свойство для храннения считанных данных
         string FileName { get; set; }
-        void Read(string file); // Метод считывания данных        
+        void Read(); // Метод считывания данных        
     }
 }

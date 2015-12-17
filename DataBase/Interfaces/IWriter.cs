@@ -10,6 +10,6 @@ namespace DataBase
     {
         List<Employee> Data { set; } // Свойство для хранения данных, которые будут записываться
         string FileName { get; set; }
-        void Write(string file); // Метод записи данных
+        void Write(); // Метод записи данных
     }
 }

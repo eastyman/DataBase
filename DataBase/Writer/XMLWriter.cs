@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DataBase
 {
-    class BINWriter:Writer
+    class XMLWriter:Writer
     {
-        public override void Write(string file)
+        public override void Write()
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream fs = new FileStream(file, FileMode.Create))
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Employee>));
+            using (FileStream fs = new FileStream(FileName, FileMode.Create))
             {
                 formatter.Serialize(fs, Data);
             }

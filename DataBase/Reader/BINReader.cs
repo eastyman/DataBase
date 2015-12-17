@@ -10,15 +10,15 @@ namespace DataBase
 {
     class BINReader : Reader
     {
-        public override void Read(string file)
+        public override void Read()
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileInfo fileInfo = new FileInfo(file);
+            FileInfo fileInfo = new FileInfo(FileName);
             if (fileInfo.Exists)
             {
                 if (fileInfo.Length > 0)
                 {
-                    using (FileStream fs = new FileStream(file, FileMode.Open))
+                    using (FileStream fs = new FileStream(FileName, FileMode.Open))
                     {
                         Data = (List<Employee>)formatter.Deserialize(fs);
                     }

@@ -10,6 +10,6 @@ namespace DataBase
     {
         public List<Employee> Data { protected get; set; }
         public string FileName { get; set; }
-        public abstract void Write(string file);
+        public abstract void Write();
     }
 }
